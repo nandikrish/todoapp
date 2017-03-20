@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="hpanel">
+    <div class="text-right">
+      <button type="button" class="btn btn-warning"><a [routerLink]="['/addUser']">Add User</a></button>
+    </div><br>
+    <div class="panel panel-primary">
+      <!-- Default panel contents -->
+      <div class="panel-heading">User List</div>
+
+      <!-- Table -->
+      <table class="table">
+        <thead>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Website</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.phone}}</td>
+            <td>{{user.website}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
